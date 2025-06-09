@@ -1,16 +1,15 @@
-# This is a sample Python script.
+import pandas as pd
+from cardPlataformasPublicidades import CardPlataformasPublicidades
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def main():
+    # Carrega os dados
+    base_marketing = pd.read_csv("MKT.csv")
+
+    # Cria o objeto da classe e gera o gráfico
+    card = CardPlataformasPublicidades(base_marketing)
+    card.gerar_grafico()
+
+if __name__ == "__main__":
+    main()
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
