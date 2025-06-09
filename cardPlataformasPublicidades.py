@@ -24,8 +24,8 @@ class CardPlataformasPublicidades:
         plt.bar(r2, facebook, color='lightblue', width=barWidth, edgecolor='white', label='Facebook')
         plt.bar(r3, newspaper, color='lightgray', width=barWidth, edgecolor='white', label='Newspaper')
 
-        plt.xlabel('Plataformas de Publicidade', fontweight='bold')
-        plt.ylabel('Investimento Total (R$)', fontweight='bold')
+        plt.xlabel(xlabel='Plataformas de Publicidade', fontweight='bold')
+        plt.ylabel(ylabel='Investimento Total (R$)', fontweight='bold')
         plt.legend()
         plt.title('Investimento por Plataforma')
         plt.tight_layout()
