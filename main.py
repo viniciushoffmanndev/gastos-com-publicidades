@@ -1,5 +1,5 @@
 import pandas as pd
-from cardPlataformasPublicidades import CardPlataformasPublicidades
+from modelo.bar.cardPlataformasPublicidades import CardPlataformasPublicidades
 
 def main():
     # Carrega os dados
