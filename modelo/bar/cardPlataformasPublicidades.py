@@ -5,7 +5,7 @@ class CardPlataformasPublicidades:
     def __init__(self, base_marketing):
         self.base_marketing = base_marketing
 
-    def gerar_grafico(self):
+    def plataformas_publicidades(self):
         barWidth = 0.25
 
         value_youtube = int(self.base_marketing['youtube'].sum())
