@@ -1,0 +1,64 @@
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.log
+
+# Ignore sensitive files
+*.csx
+*.xls
+*.xlsx
+*.doc
+*.docx
+*.db
+*.env
+*.password
+*.key
+*.pem
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+
+# Ignore virtual environment folders
+venv/
+env/
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore Windows specific files
+Thumbs.db
+
+# Ignore other sensitive files
+*.bak
+*.backup
+*.old
+*.swp
+
+# Ignore data files
+*.csv
+*.json
+*.xlsx
+*.xls
+
+# Ignore trained models
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+
+# Ignore configuration files
+config.yaml
+config.json
+config.ini
+
+# Ignore output directories
+output/

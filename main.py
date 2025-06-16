@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 from modelo.bar.cardPlataformasPublicidades import CardPlataformasPublicidades
 from modelo.pairplot.correlacaoSalesxPlataformas import CorrelacaoSalesxPlataformas
 from modelo.bar.investimentoXsales import InvestimentoXsales
@@ -11,7 +12,8 @@ from modelo.regressao.regressaoLinear import RegressaoLinear
 
 def main():
     # Carrega os dados
-    base_marketing = pd.read_csv("MKT.csv")
+    caminho = os.path.join("notebooks", "raw", "banco.csv")
+    base_marketing = pd.read_csv(caminho, sep = ",")
 
     # Cria o objeto da classe e gera o gráfico
     comparacao = CardPlataformasPublicidades(base_marketing)
