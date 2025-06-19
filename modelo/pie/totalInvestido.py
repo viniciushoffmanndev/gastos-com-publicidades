@@ -1,10 +1,12 @@
 import matplotlib.pyplot as plt
+import os
 
 class TotalInvestido:
     def __init__(self, base_marketing):
         self.base_marketing = base_marketing
     
     def total_investido(self):
+        os.makedirs('outputs/figures', exist_ok=True)
         # ajustando o tamanho da imagem para exibição
         plt.rcParams["figure.figsize"] = (6, 5)
         # somando os valores investidos nas plataformas de publicidade e armazenando em novas variáveis
@@ -20,6 +22,10 @@ class TotalInvestido:
         # gerando o gráfico de pizza através dos parametros
         plt.pie(values, labels=names, autopct='%1.2f%%', labeldistance=1.05, wedgeprops={'linewidth': 2, 'edgecolor': 'white'});
         plt.title("Total investimento X Total Sales")
-        plt.show();
+        #plt.show();
+
+        #salvando no raw
+        plt.savefig('outputs/figures/totalInvestimentoXsales.png')
+        plt.close()
 
 

@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
 class CardPlataformasPublicidades:
     def __init__(self, base_marketing):
@@ -7,6 +8,8 @@ class CardPlataformasPublicidades:
 
     def plataformas_publicidades(self):
         barWidth = 0.25
+        os.makedirs("outputs/figures", exist_ok=True)
+        os.makedirs(os.path.join("outputs", "figures"), exist_ok=True)
 
         value_youtube = int(self.base_marketing['youtube'].sum())
         value_facebook = int(self.base_marketing['facebook'].sum())
@@ -29,5 +32,9 @@ class CardPlataformasPublicidades:
         plt.legend()
         plt.title('Investimento por Plataforma')
         plt.tight_layout()
-        plt.show()
+        #plt.show()
+
+        #salvando no raw
+        plt.savefig('outputs/figures/investimentoPorPlataforma.png')
+        plt.close()
 

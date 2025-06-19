@@ -1,4 +1,4 @@
-from modelo.plot.preditivo import Preditivo
+
 
 
 

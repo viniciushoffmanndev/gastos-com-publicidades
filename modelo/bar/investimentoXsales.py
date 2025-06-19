@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 class InvestimentoXsales:
     def __init__(self, base_marketing):
@@ -8,6 +9,7 @@ class InvestimentoXsales:
     def investimento(self):
         # definindo largura da barra
         barWidth = 0.25
+        os.makedirs("outputs/figures", exist_ok=True)
 
         # somando os valores investidos nas plataformas de publicidade e armazenando em novas variáveis
         value_youtube = int(self.base_marketing['youtube'].sum())
@@ -37,4 +39,8 @@ class InvestimentoXsales:
         # criando legenda e mostrando gráfico
         plt.title("Investimento X Sales")
         plt.legend()
-        plt.show();
+        #plt.show();
+
+        #salvando no raw
+        plt.savefig('outputs/figures/investimentoXsales.png')
+        plt.close()
