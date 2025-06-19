@@ -44,7 +44,8 @@ Thumbs.db
 *.swp
 
 # Ignore data files
-*notebooks/raw/*.csv
+notebooks/raw/*.csv
+notebooks/raw/*.xls
 *.json
 *.xlsx
 *.xls
@@ -61,4 +62,6 @@ config.json
 config.ini
 
 # Ignore output directories
-outputs/
+notebooks/outputs/
+notebooks/outputs/figures/
+notebooks/outputs/reports/
